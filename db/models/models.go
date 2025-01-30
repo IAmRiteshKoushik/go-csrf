@@ -14,9 +14,9 @@ type User struct {
 }
 
 type TokenClaims struct {
-	StandardClaims jwt.StandardClaims
-	Role           string `json:"role"`
-	Csrf           string `json:"csrf"`
+	jwt.StandardClaims
+	Role string `json:"role"`
+	Csrf string `json:"csrf"`
 }
 
 const RefreshTokenValidTime = time.Hour * 72
